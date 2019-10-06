@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JabRef</title>
+	<meta name="keywords" content="JabRef, bibtex, biblatex, bibliography, editor">
+	<meta name="description" content="Graphical Java application for managing bibtex (.bib) databases">
+  <link href='//fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="jabref.css">
+    <link rel="stylesheet" href="combo.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/3.2.2/anchor.min.js"></script>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	
+</head>
+<body>
+<div class="modal fade" tabindex="-1" role="dialog" id="impressmodal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Impressum</h4>
+      </div>
+      <div class="modal-body">
+        
+        <p>Dieses Impressum wird angegeben, da „die Impressumspflicht des TMG schon dann gegeben [ist], wenn es zumindest theoretisch möglich wäre, mit einer Webseite gleichen Zwecks durch Einsatz von Werbebannern oder ähnlichen Mitteln mindestens kostendeckende Einnahmen zu erzielen.“ (<a href="https://de.wikipedia.org/w/index.php?title=Impressumspflicht&amp;oldid=151091516">Wikipedia</a>)</p>
+
+<p>Angaben gemäß § 5 TMG</p>
+
+<p>Oliver Kopp
+Felldorfer Str. 17
+70563 Stuttgart</p>
+
+<h4 id="vertreten-durch">Vertreten durch:</h4>
+<p>Oliver Kopp</p>
+
+<h4 id="kontakt">Kontakt:</h4>
+<p>E-Mail: jabrefmail+webfeedback@gmail.com</p>
+
+<h3 id="haftungsausschluss">Haftungsausschluss:</h3>
+
+<h4 id="haftung-für-inhalte">Haftung für Inhalte</h4>
+
+<p>Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.</p>
+
+<h4 id="urheberrecht">Urheberrecht</h4>
+
+<p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet. Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.</p>
+
+<h4 id="datenschutz">Datenschutz</h4>
+
+<p>Die Nutzung unserer Webseite ist in der Regel ohne Angabe personenbezogener Daten möglich. Soweit auf unseren Seiten personenbezogene Daten (beispielsweise Name, Anschrift oder eMail-Adressen) erhoben werden, erfolgt dies, soweit möglich, stets auf freiwilliger Basis. Diese Daten werden ohne Ihre ausdrückliche Zustimmung nicht an Dritte weitergegeben.
+Wir weisen darauf hin, dass die Datenübertragung im Internet (z.B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich.
+Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten durch Dritte zur Übersendung von nicht ausdrücklich angeforderter Werbung und Informationsmaterialien wird hiermit ausdrücklich widersprochen. Die Betreiber der Seiten behalten sich ausdrücklich rechtliche Schritte im Falle der unverlangten Zusendung von Werbeinformationen, etwa durch Spam-Mails, vor.</p>
+
+<h4 id="google-analytics">Google Analytics</h4>
+
+<p>Diese Website benutzt Google Analytics, einen Webanalysedienst der Google Inc. („Google“). Google Analytics verwendet sog. „Cookies“, Textdateien, die auf Ihrem Computer gespeichert werden und die eine Analyse der Benutzung der Website durch Sie ermöglichen. Die durch das Cookie erzeugten Informationen über Ihre Benutzung dieser Website werden in der Regel an einen Server von Google in den USA übertragen und dort gespeichert. Im Falle der Aktivierung der IP-Anonymisierung auf dieser Website, wird Ihre IP-Adresse von Google jedoch innerhalb von Mitgliedstaaten der Europäischen Union oder in anderen Vertragsstaaten des Abkommens über den Europäischen Wirtschaftsraum zuvor gekürzt. Nur in Ausnahmefällen wird die volle IP-Adresse an einen Server von Google in den USA übertragen und dort gekürzt. Im Auftrag des Betreibers dieser Website wird Google diese Informationen benutzen, um Ihre Nutzung der Website auszuwerten, um Reports über die Websiteaktivitäten zusammenzustellen und um weitere mit der Websitenutzung und der Internetnutzung verbundene Dienstleistungen gegenüber dem Websitebetreiber zu erbringen. Die im Rahmen von Google Analytics von Ihrem Browser übermittelte IP-Adresse wird nicht mit anderen Daten von Google zusammengeführt. Sie können die Speicherung der Cookies durch eine entsprechende Einstellung Ihrer Browser-Software verhindern; wir weisen Sie jedoch darauf hin, dass Sie in diesem Fall gegebenenfalls nicht sämtliche Funktionen dieser Website vollumfänglich werden nutzen können. Sie können darüber hinaus die Erfassung der durch das Cookie erzeugten und auf Ihre Nutzung der Website bezogenen Daten (inkl. Ihrer IP-Adresse) an Google sowie die Verarbeitung dieser Daten durch Google verhindern, indem Sie das unter dem Link <a href="http://tools.google.com/dlpage/gaoptout?hl=de">http://tools.google.com/dlpage/gaoptout?hl=de</a> verfügbare Browser-Plugin herunterladen und installieren.</p>
+
+<p>Sie können die Erfassung durch Google Analytics verhindern, indem Sie auf folgenden Link klicken. Es wird ein Opt-Out-Cookie gesetzt, das die zukünftige Erfassung Ihrer Daten beim Besuch dieser Website verhindert:
+<a href="javascript:gaOptout()">Google Analytics deaktivieren</a></p>
+
+<p>Nähere Informationen zu Nutzungsbedingungen und Datenschutz finden Sie unter <a href="http://www.google.com/analytics/terms/de.html">http://www.google.com/analytics/terms/de.html</a> bzw. unter &gt;https://www.google.de/intl/de/policies/&gt;. Wir weisen Sie darauf hin, dass auf dieser Website Google Analytics um den Code „anonymizeIp“ erweitert wurde, um eine anonymisierte Erfassung von IP-Adressen (sog. IP-Masking) zu gewährleisten.</p>
+
+<h4 id="sonstiges">Sonstiges</h4>
+
+<p>Dieses Impressum basiert auf <a href="https://www.datenschutzbeauftragter-info.de/">https://www.datenschutzbeauftragter-info.de/</a> und <a href="http://www.impressum-generator.de/">http://www.impressum-generator.de/</a> von der <a href="http://www.kanzlei-hasselbach.de/rechtsanwalt-frankfurt/">Kanzlei Hasselbach, Frankfurt</a>.</p>
+
+
+      </div>
+      <div class="modal-footer">
+        <button id="impressclose" type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div id="main">
+    <nav>
+
+    <div style="position: absolute; top: 0; left: 0;">
+      <script id='fbhuycx'>(function(i){var f,s=document.getElementById(i);f=document.createElement('iframe');f.src='//button.flattr.com/view/?fid=mr0g20&button=compact&url=https%3A%2F%2Fwww.jabref.org';f.title='Flattr';f.height=20;f.width=110;f.style.borderWidth=0;s.parentNode.insertBefore(f,s);})('fbhuycx');</script>
+    </div>
+
+    <ul>
+      
+        
+        <li class="p-jabref"><a href="#jabref">JabRef</a></li>
+      
+        
+        <li class="p-features"><a href="#features">Features</a></li>
+      
+        
+        <li class="p-downloads"><a href="#downloads">Downloads</a></li>
+      
+        
+        <li class="p-help"><a href="#help">Help</a></li>
+      
+        
+        <li class="p-donations"><a href="#donations">Donations</a></li>
+      
+        
+        <li class="p-javacomp"><a href="#javacomp">Java by Comparison</a></li>
+      
+        
+        <li class="p-ressources"><a href="#ressources">Resources</a></li>
+      
+        
+        <li class="p-contribute"><a href="#contribute">Contribute</a></li>
+      
+      <li class="p-forum"><a class="absolute" href="http://discourse.jabref.org">Forum</a></li>
+      <li class="p-blog"><a class="absolute" href="https://blog.jabref.org/">Blog</a></li>
+    </ul>
+<a href="https://github.com/JabRef/jabref" class="github-corner"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#fff; color:#151513; position: absolute; top: 0; border: 0; right: 0;"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>    </nav>
+
+
+    
+      
+      <div id="jabref" class="section p-jabref">
+        
+        <div class="container left">
+          <h1 id="jabref-">JabRef <a href="https://downloads.jabref.org"><img src="https://img.shields.io/github/v/release/JabRef/jabref.svg" alt="release" /></a></h1>
+<div class="container">
+	<div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+			<div id="myCarousel" class="carousel slide" data-ride="carousel">
+			    <!-- Carousel indicators -->
+			    <ol class="carousel-indicators">
+			        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			        <li data-target="#myCarousel" data-slide-to="1"></li>
+			        <li data-target="#myCarousel" data-slide-to="2"></li>
+			        <li data-target="#myCarousel" data-slide-to="3"></li>
+			        <li data-target="#myCarousel" data-slide-to="4"></li>
+			        <li data-target="#myCarousel" data-slide-to="5"></li>
+			    </ol>   
+			    <!-- Wrapper for carousel items -->
+			    <div class="carousel-inner">
+			        <div class="item active">
+			            <img src="img/JabRef-4-0-MainTable.png" alt="Main table" class="center-block" />
+			            <div class="carousel-caption well well-sm">
+					        <h3>Main table</h3>
+					        <p>All your references listed in a nice looking, sortable table.</p>
+					    </div>
+			        </div>
+			        <div class="item">
+			            <img src="img/JabRef-4-0-EntryEditor.png" alt="Entry Editor" class="center-block" />
+			            <div class="carousel-caption well well-sm">
+					        <h3>Entry editor</h3>
+					        <p>Edit your entries using the entry editor.</p>
+					    </div>
+			        </div>
+			        <div class="item">
+			            <img src="img/JabRef-4-0-Groups.png" alt="JabRef Groups Feature" class="center-block" />
+			            <div class="carousel-caption well well-sm">
+						    <h3>Groups View</h3>
+						    <p>Group your references with manual or automated (e.g., by author or keyword) assignment.</p>
+					    </div>
+			        </div>
+			        <div class="item">
+			            <img src="img/JabRef-4-0-FileAnnotations.png" alt="JabRef Annotations Viewer" class="center-block" />
+			            <div class="carousel-caption well well-sm">
+						    <h3>Annotations View</h3>
+						    <p>Read your PDF annotations within JabRef.</p>
+					    </div>
+			        </div>
+			        <div class="item">
+			            <img src="img/JabRef-4-0-Search.png" alt="JabRef Search Feature" class="center-block" />
+			            <div class="carousel-caption well well-sm">
+						    <h3>Search for entries</h3>
+						    <p>Advanced and fast search features: Use simple terms, combinations or even regular expressions to search your database.</p>
+					    </div>
+			        </div>
+			        <div class="item">
+			            <img src="img/JabRef-4-0-DOI-handling.png" alt="JabRef Search Feature" class="center-block" />
+			            <div class="carousel-caption well well-sm">
+						    <h3>DOI support</h3>
+						    <p>Automatic lookup of Digital Object Identifiers (DOIs), automatic entry completion based on DOI, automatic fulltext download based on DOI</p>
+					    </div>
+			        </div>
+			    </div>
+			    <!-- Carousel controls -->
+			    <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+			        <span class="glyphicon glyphicon-chevron-left"></span>
+			    </a>
+			    <a class="carousel-control right" href="#myCarousel" data-slide="next">
+			        <span class="glyphicon glyphicon-chevron-right"></span>
+			    </a>
+			</div>
+		</div>
+		<div class="col-md-1"></div>
+	</div>
+</div>
+<p>JabRef is an open source bibliography reference manager.
+The native file format used by JabRef is BibTeX, the standard LaTeX bibliography format.
+JabRef is a desktop application and runs on the <a href="http://www.java.com/">Java VM</a> (<a href="https://github.com/JabRef/jabref/issues/2594">version 8</a>), and works equally well on Windows, Linux, and Mac OS X.</p>
+
+<p>BibTeX is an application and a bibliography file format written by Oren Patashnik and Leslie Lamport for the LaTeX document preparation system.
+General information can be found on the <a href="https://www.ctan.org/pkg/bibtex">CTAN BibTeX package information page</a>.
+JabRef also supports <a href="https://www.ctan.org/pkg/biblatex">BibLaTeX</a>.</p>
+
+<p>Bibliographies generated by LaTeX and BibTeX from a BibTeX file can be formatted to suit any reference list specifications through the use of different BibTeX and BibLaTeX style files.</p>
+
+        </div>
+      </div>
+    
+      
+      <div id="features" class="section p-features">
+        
+        <div class="subtlecircle sectiondivider faicon">
+          <span class="fa-stack">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-archive fa-stack-1x"></i>
+          </span>
+          <h5 class="icon-title">Features</h5>
+        </div>
+        
+        <div class="container center">
+          <h3 id="search-the-web">Search the Web</h3>
+<p>Entries can be searched in external databases and BibTeX entries can be fetched from there.
+Example sources: arXiv, CiteseerX, Google Scholar, Medline, GVK, IEEEXplore, and Springer.</p>
+
+<h3 id="import-of-various-formats">Import of various formats</h3>
+<p>RIS, Medline/Pubmed (xml), Refer/Endnote, INSPEC, BibTeXML, CSA, ISI Web of Science, SilverPlatter, Scifinder, OVID, Biblioscape, Sixpack, JStor, and RIS.</p>
+
+<p>Moreover, the <a href="https://addons.mozilla.org/en-US/firefox/addon/jabfox?src=external-jabrefSite">FireFox add-on JabFox</a> makes importing new bibliographic information directly from the browser very easy.</p>
+
+<h3 id="automatic-download-of-full-texts">Automatic download of full texts</h3>
+<p>JabRef can be instructed to search for the full text of a reference, download it, and directly link it to the BibTeX entry.</p>
+
+<h3 id="search-the-bibliography">Search the bibliography</h3>
+<p>Search a pattern in the whole bibliography.</p>
+
+<h3 id="classification-of-entries">Classification of entries</h3>
+<p>You can group entries explicitly, by keywords or any other fields.</p>
+
+<h3 id="integrates-to-your-environment">Integrates to your environment</h3>
+<p>Launch external applications: PDF viewers, web browser</p>
+
+<p>Insert citations into TeXstudio, LyX, Kile, Emacs, TeXmaker, Vim, and WinEdt</p>
+
+<h3 id="automatic-key-generation">Automatic Key generation</h3>
+<p>BibTeX keys can be automatically generated in a customizable way from document data, e.g. using author names, title and year.</p>
+
+<h3 id="support-for-xmp-metadata-in-pdfs">Support for XMP Metadata in PDFs</h3>
+<p>Improve the workflow of sharing PDFs and bibliography information</p>
+
+<h3 id="built-in-and-custom-export-formats">Built-in and custom export formats</h3>
+<p>HTML, Docbook, BibTeXML, MODS, RTF, Refer/Endnote, and OpenOffice.org as well as LibreOffice</p>
+
+<h3 id="customization-of-the-jabref-interface">Customization of the JabRef interface</h3>
+<p>Fonts, displayed fields, etc.</p>
+
+<h3 id="customization-of-bibtex-fields">Customization of BibTeX fields</h3>
+<p>You can add your own fields to any BibTeX entry type.</p>
+
+<h3 id="translations">Translations</h3>
+<p>JabRef menus and dialog boxes are translated into Brazilian Portuguese, Chinese (simplified), Danish, Dutch, English, French, German, Indonesian, Italian, Japanese, Norwegian, Persian, Russian, Spanish, Swedish, Turkish, Vietnamese.</p>
+
+<p>See <a href="https://github.com/JabRef/jabref/wiki/Translating-JabRef">our translation page on github</a> for more information and the status of each translation.</p>
+
+        </div>
+      </div>
+    
+      
+      <div id="downloads" class="section p-downloads">
+        
+        <div class="subtlecircle sectiondivider faicon">
+          <span class="fa-stack">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-cloud-download fa-stack-1x"></i>
+          </span>
+          <h5 class="icon-title">Downloads</h5>
+        </div>
+        
+        <div class="container center">
+          <div style="position: relative; top: -12px; display: table; margin: 0px auto; font-size:20px; width: 600px;">
+  <div style="width: 300px; float:left;" class="center">
+    <a href="https://www.fosshub.com/JabRef.html"><i class="fa fa-cloud-download fa-5x"></i><br />download latest release</a>
+  </div>
+
+  <div style="width: 300px; overflow: hidden;">
+    <a href="https://builds.jabref.org/master/"><i class="fa fa-flask fa-5x"></i><br />download development snapshot</a>
+  </div>
+</div>
+
+<p>We use <a href="https://www.ej-technologies.com/products/install4j/overview.html">install4j</a>, the multi-platform installer builder.</p>
+
+
+        </div>
+      </div>
+    
+      
+      <div id="help" class="section p-help">
+        
+        <div class="subtlecircle sectiondivider faicon">
+          <span class="fa-stack">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-question-circle fa-stack-1x"></i>
+          </span>
+          <h5 class="icon-title">Help</h5>
+        </div>
+        
+        <div class="container center">
+          <h2 id="documentation">Documentation</h2>
+
+<p>Documentation is available at <a href="https://help.jabref.org">https://help.jabref.org</a>.
+There was a huge effort to generate a German user manual. You find it at <a href="https://manuals.jabref.org">https://manuals.jabref.org</a>.</p>
+
+<h2 id="faq">FAQ</h2>
+
+<p>Frequently asked questions are available at <a href="https://help.jabref.org/en/#faq">https://help.jabref.org/en/#faq</a>.</p>
+
+<h2 id="general-support">General Support</h2>
+
+<p>Use our discourse forum at <a href="http://discourse.jabref.org">http://discourse.jabref.org</a> to get help or to provide feedback.</p>
+
+<p>You can also <a href="http://discourse.jabref.org/c/features">propose new features there</a>.</p>
+
+<p><a href="https://github.com/JabRef/jabref/issues">Bug and error reports</a> are managed at GitHub.</p>
+
+<h2 id="development-information">Development Information</h2>
+
+<p>The development of JabRef is managed at GitHub.</p>
+
+<p>You can find the source code and a contribution guide at our github project page at <a href="https://github.com/JabRef/jabref">https://github.com/JabRef/jabref</a>.</p>
+
+<h2 id="changelog">Changelog</h2>
+
+<p>See <a href="https://github.com/JabRef/jabref/blob/master/CHANGELOG.md">https://github.com/JabRef/jabref/blob/master/CHANGELOG.md</a></p>
+
+        </div>
+      </div>
+    
+      
+      <div id="donations" class="section p-donations">
+        
+        <div class="subtlecircle sectiondivider faicon">
+          <span class="fa-stack">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-gift fa-stack-1x"></i>
+          </span>
+          <h5 class="icon-title">Donations</h5>
+        </div>
+        
+        <div class="container center">
+          <div style="font-size:30px; margin-bottom:20px;">
+  <a href="https://github.com/JabRef/jabref/wiki/Donations" style="text-decoration: none;"><span class="fa fa-gift"></span> Donations keep us going.</a>
+</div>
+
+<p><a href="https://liberapay.com/JabRef"><img src="https://liberapay.com/assets/widgets/donate.svg" alt="Donate to JabRef on Liberapay" /></a>
+<a href="https://www.paypal.com/cgi-bin/webscr?item_name=JabRef+Bibliography+Manager&amp;cmd=_donations&amp;lc=US&amp;currency_code=EUR&amp;business=donations%40jabref.org"><img src="https://img.shields.io/badge/donate-paypal-orange.svg" alt="PayPal Donation" /></a></p>
+
+<p>Please <a href="https://github.com/JabRef/jabref/wiki/Donations">visit our wiki</a> for more information such as donating via bank transfer.</p>
+
+<p>JabRef development is powered by <a href="http://baobab.org/BAOLA-sparkling-drink">Baola</a> and <a href="https://www.yourkit.com/java/profiler/">YourKit Java Profiler</a> 
+<img src="img/yklogo.png" alt="Image of YourKit" style="height: 15px" />.</p>
+
+<p>If you need books, please order them at your local bookstore.<br />
+In case you stick with <a href="http://www.amazon.de/b?_encoding=UTF8&amp;camp=1638&amp;creative=6742&amp;linkCode=ur2&amp;node=13690631&amp;site-redirect=de&amp;tag=jabref-21">Amazon</a>, please use <a href="http://www.amazon.de/b?_encoding=UTF8&amp;camp=1638&amp;creative=6742&amp;linkCode=ur2&amp;node=13690631&amp;site-redirect=de&amp;tag=jabref-21">this link</a>.
+You can use <a href="https://chrome.google.com/webstore/detail/amazing-affiliate-link/ikoompcclgdajbbijbhpgfpigolnbgpk">Amazing Affiliate Link</a> to ensure that the affiliate link always works.
+Enter <code class="highlighter-rouge">jabref-21</code> as code.
+This seems to work in Germany only.</p>
+
+<p><a href="http://baobab.org/BAOLA-sparkling-drink" style="text-decoration: none;">
+<img src="img/BAOLA-Erfrischungsgetraenk-min.jpg" width="25%" alt="Image of Baola" style="display: block; margin-left: auto; margin-right: auto" />
+</a></p>
+
+
+        </div>
+      </div>
+    
+      
+      <div id="javacomp" class="section p-javacomp">
+        
+        <div class="subtlecircle sectiondivider faicon">
+          <span class="fa-stack">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-book fa-stack-1x"></i>
+          </span>
+          <h5 class="icon-title">Java by Comparison</h5>
+        </div>
+        
+        <div class="container center">
+          <div style="font-size:30px; margin-bottom:20px;">
+<a href="http://java.by-comparison.com" style="text-decoration: none;">The code quality book from the authors of JabRef!</a>
+</div>
+
+<p><a href="http://java.by-comparison.com"><img src="img/javacomp.jpg" alt="Java by Comparison Cover" style="height: 500px" /></a></p>
+
+<p><strong>Simon Harrer, Jörg Lenhard, and Linus Dietz:<br />
+<a href="http://java.by-comparison.com">Java by Comparison</a><br />
+The Pragmatic Bookshelf, Raleigh, NC, 2018</strong></p>
+
+<p style="text-align: left">
+Improve your coding skills by comparing your code to that of expert programmers, so you can write code that’s clean, concise, and to the point: code that others will read with pleasure and reuse. Get hands-on advice to level up your coding style through small and understandable examples that compare flawed code to an improved solution. Discover handy tips and tricks, as well as common bugs an experienced Java programmer needs to know. Make your way from a Java novice to experienced developer.
+</p>
+
+        </div>
+      </div>
+    
+      
+      <div id="ressources" class="section p-ressources">
+        
+        <div class="subtlecircle sectiondivider faicon">
+          <span class="fa-stack">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-wrench fa-stack-1x"></i>
+          </span>
+          <h5 class="icon-title">Resources</h5>
+        </div>
+        
+        <div class="container left">
+          <h2 id="jabref-compatible-text-editors">JabRef-compatible text editors</h2>
+
+<p>JabRef can push entries, i.e. insert <code class="highlighter-rouge">\cite{key}</code> commands, to the following text editors:</p>
+
+<ul>
+  <li><a href="https://www.gnu.org/software/emacs/">Emacs</a></li>
+  <li><a href="http://www.lyx.org/">LyX/Kile</a></li>
+  <li><a href="http://www.texstudio.org/">TeXstudio</a></li>
+  <li><a href="http://www.xm1math.net/texmaker/">Texmaker</a></li>
+  <li><a href="http://www.vim.org/">Vim</a></li>
+  <li><a href="http://www.winedt.com/">WinEdt</a></li>
+</ul>
+
+<p>Additionally, JabRef can natively insert citations and format a bibliography in:</p>
+
+<ul>
+  <li><a href="https://www.openoffice.org/">OpenOffice Writer</a></li>
+  <li><a href="https://www.libreoffice.org/">LibreOffice Writer</a></li>
+</ul>
+
+<p>See <a href="https://help.jabref.org/en/OpenOfficeIntegration">OpenOffice/LibreOffice integration</a> for details.</p>
+
+<h2 id="external-tools">External tools</h2>
+
+<h3 id="bibsync">BibSync</h3>
+
+<p><em>by Daniel Mendler</em></p>
+
+<p>BibSync is a tool to synchronize your paper database with a BibTeX file which might be most useful for Physicists and Mathematicians since it supports synchronization with DOI and arXiv.</p>
+
+<p>Homepage: <a href="https://github.com/minad/bibsync">https://github.com/minad/bibsync</a></p>
+
+<h3 id="bibtex4word">Bibtex4word</h3>
+
+<p><em>by Mike Brookes</em></p>
+
+<p>Bibtex4Word is an add-in for Microsoft Word that allows the citation of references and the insertion of a bibliography into your document using your choice of formatting style. It is lightweight, transparent and does not mess up your documents.</p>
+
+<p>Homepage: <a href="http://www.ee.ic.ac.uk/hp/staff/dmb/perl/index.html">http://www.ee.ic.ac.uk/hp/staff/dmb/perl/index.html</a></p>
+
+<h3 id="endnote-filter-set">Endnote filter set</h3>
+
+<p>This improves author recognitzion and adds support for more fileds to EndNote.</p>
+
+<p>Homepage: <a href="https://github.com/JabRef/EndNode-JabRef-filters">https://github.com/JabRef/EndNode-JabRef-filters</a></p>
+
+<h3 id="eratosthenes-reference-manager">Eratosthenes Reference Manager</h3>
+
+<p><em>by Matthew Matlock</em></p>
+
+<p>Eratosthenes Reference Manager is a BibTeX-based bibliography manager for Android. It <a href="https://bitbucket.org/mkmatlock/eratosthenes/wiki/Home#!using-eratosthenes-with-jabref">integrates with JabRef</a>, supporting top-level groups and attached files/external links.</p>
+
+<p>Available for Android 4.0 and up.</p>
+
+<p>App store: <a href="https://play.google.com/store/apps/details?id=com.mm.eratos">https://play.google.com/store/apps/details?id=com.mm.eratos</a></p>
+
+<h3 id="export-filter-editor">Export-Filter Editor</h3>
+
+<p><em>by Felix Wilke</em></p>
+
+<p>Using this tool you can easily create a custom export filter for JabRef to build you own bibliography style.
+Styles files are available at <a href="https://layouts.jabref.org">https://layouts.jabref.org</a> and for LibeOffice at <a href="https://jstyles.jabref.org">https://jstyles.jabref.org</a>.
+The tool itself supports:</p>
+
+<ul>
+  <li>HTML Export Filter</li>
+  <li>RTF Export Filter</li>
+  <li>OpenOffice/ LibreOffice Style File</li>
+  <li>Saving the filter for later refinements</li>
+</ul>
+
+<p><a href="https://sourceforge.net/projects/efe/?source=dlp">Download the Export-Filter Editor</a></p>
+
+<h3 id="feinerleiser">Feinerleiser</h3>
+
+<p><em>by Niklas Alt</em></p>
+
+<p>Feinerleiser is a tool for improving the JabRef-LibreOffice integration when writing for the humanities. This tool can be run to finalize a document, providing citation features that are not supported by JabRef itself.</p>
+
+<p>Homepage: <a href="http://www.sourceforge.net/projects/feinerleiser/">http://www.sourceforge.net/projects/feinerleiser/</a></p>
+
+<h3 id="gitignoreio">gitignore.io</h3>
+
+<p>This site offers to generate <code class="highlighter-rouge">.gitignore</code> files using common patterns for applications.
+For instance, you can use the keywords JabRef, Windows, Linux, macos, latex to generate a <code class="highlighter-rouge">.gitignore</code> for your daily tex work.</p>
+
+<ul>
+  <li>Homepage: <a href="https://www.gitignore.io/">https://www.gitignore.io/</a></li>
+  <li>.gitignore for JabRef and friends: <a href="https://www.gitignore.io/api/jabref%2Clatex%2Cwindows%2Clinux%2Cmacos">https://www.gitignore.io/api/jabref%2Clatex%2Cwindows%2Clinux%2Cmacos</a></li>
+</ul>
+
+<h3 id="jabfox">JabFox</h3>
+
+<p><em>by Tobias Diez</em></p>
+
+<p>JabFox is a Firefox add-on for users of the bibliographic reference manager JabRef. It automatically identifies and extracts bibliographic information on websites and sends them to JabRef in one click. A wide range of publisher sites, library catalogs and databases are supported.</p>
+
+<ul>
+  <li>Homepage: <a href="https://addons.mozilla.org/en-US/firefox/addon/jabfox/">https://addons.mozilla.org/en-US/firefox/addon/jabfox/</a></li>
+  <li>Source: <a href="https://github.com/JabRef/JabFox/">https://github.com/JabRef/JabFox/</a></li>
+</ul>
+
+<h3 id="winedts-jabref-launcher">WinEdt’s JabRef launcher</h3>
+
+<p><em>by Karl Koeller</em></p>
+
+<p>This WinEdt’s package allows to launch the JabRef program from within WinEdt.</p>
+
+<p><a href="http://www.winedt.org/config/menus/JabRef.html">Download the WinEdt’s JabRef launcher</a></p>
+
+<h2 id="export-filters">Export filters</h2>
+
+<p>JabRef allows you to create custom export filters.
+This functionality and the installation procedure are described in the help file on <a href="https://help.jabref.org/en/CustomExports">Custom export filters</a>.
+Some users have created export filters that can be useful to many others.
+They are collected at <a href="https://layouts.jabref.org">https://layouts.jabref.org</a>.</p>
+
+<h2 id="jabref-journal-abbreviation-lists">JabRef journal abbreviation lists</h2>
+
+<p>JabRef can help you refactor your reference list by automatically abbreviating or unabbreviating journal names, as explained in <a href="https://help.jabref.org/en/JournalAbbreviations">the dedicated help</a>.</p>
+
+<p>Although JabRef comes with a build-in list of journals, additional lists are available at <a href="https://abbrv.jabref.org">https://abbrv.jabref.org</a>.</p>
+
+<h2 id="plugins-and-additional-entry-fetchers">Plugins and additional entry fetchers</h2>
+
+<p>Until version 2.11 JabRef offered a plugin framework.
+Support for that has been removed.
+See <a href="https://github.com/JabRef/jabref/issues/152">issue #152</a> for the current status of integration of the plugins into JabRef.</p>
+
+<p>The current way to add a new entry fetcher or additional functionality is to directly <a href="https://github.com/JabRef/jabref/blob/master/CONTRIBUTING.md">contribute</a> the code to JabRef.</p>
+
+        </div>
+      </div>
+    
+      
+      <div id="contribute" class="section p-contribute">
+        
+        <div class="subtlecircle sectiondivider faicon">
+          <span class="fa-stack">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-users fa-stack-1x"></i>
+          </span>
+          <h5 class="icon-title">Contribute</h5>
+        </div>
+        
+        <div class="container center">
+          <p>Please head over to our <a href="http://help.jabref.org/en/FAQcontributing">contributing FAQ</a>.</p>
+
+        </div>
+      </div>
+    
+
+
+    <div id="footer" class="section text-white">
+      <div class="container">
+        
+        <p>Based on <a href="http://t413.com/">Tim O’Brien’s</a> <a href="https://github.com/t413/SinglePaged">SinglePaged theme</a>
+—
+this site is <a href="https://github.com/JabRef/www.jabref.org/">open source</a>
+—
+<a style="cursor:pointer" data-toggle="modal" data-target="#impressmodal">Impressum</a></p>
+
+      </div>
+    </div>
+  </div>
+  <script>
+	  anchors.options = {
+         placement: 'left'
+	  }
+	  anchors.add('h5');
+  </script>
+
+
+
+<script>
+var gaProperty = 'UA-74055103-1';
+var disableStr = 'ga-disable-' + gaProperty;
+if (document.cookie.indexOf(disableStr + '=true') > -1) {
+  window[disableStr] = true;
+}
+function gaOptout() {
+  document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+  window[disableStr] = true;
+}
+
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-74055103-1', 'auto');
+ga('set', 'anonymizeIp', true);
+ga('send', 'pageview');
+</script>
+
+
+</body>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="site.js"></script>
+<script>
+$('#impressmodal').on('shown.bs.modal', function () {
+  $('#impressclose').focus()
+})
+</script>
+</html>

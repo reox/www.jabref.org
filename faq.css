@@ -1,0 +1,97 @@
+/* ----- per faq colors! ----- */
+
+  
+  
+  
+  nav .p-faq05_intro { border-color: #4d4674; }
+  #faq05_intro { background-color: #4d4674 !important; color: #ffffff; }
+  #faq05_intro a { color: #ffffff; }
+  #faq05_intro .sectiondivider { color: #4d4674; }
+
+  
+  
+  
+  nav .p-faq10_general { border-color: #6C1027; }
+  #faq10_general { background-color: #6C1027 !important; color: #ffffff; }
+  #faq10_general a { color: #ffffff; }
+  #faq10_general .sectiondivider { color: #6C1027; }
+
+  
+  
+  
+  nav .p-faq15_sharing { border-color: #2A7722; }
+  #faq15_sharing { background-color: #2A7722 !important; color: #e0e0e0; }
+  #faq15_sharing a { color: #e0e0e0; }
+  #faq15_sharing .sectiondivider { color: #2A7722; }
+
+  
+  
+  
+  nav .p-faq20_linux { border-color: #191E80; }
+  #faq20_linux { background-color: #191E80 !important; color: #e0e0e0; }
+  #faq20_linux a { color: #e0e0e0; }
+  #faq20_linux .sectiondivider { color: #191E80; }
+
+  
+  
+  
+  nav .p-faq21_osx { border-color: #c869bf; }
+  #faq21_osx { background-color: #c869bf !important; color: #4d4674; }
+  #faq21_osx a { color: #4d4674; }
+  #faq21_osx .sectiondivider { color: #c869bf; }
+
+  
+  
+  
+  nav .p-faq22_windows { border-color: #49a7e9; }
+  #faq22_windows { background-color: #49a7e9 !important; color: #e0e0e0; }
+  #faq22_windows a { color: #e0e0e0; }
+  #faq22_windows .sectiondivider { color: #49a7e9; }
+
+  
+  
+  
+  nav .p-faq80_developers { border-color: #2A7722; }
+  #faq80_developers { background-color: #2A7722 !important; color: #e0e0e0; }
+  #faq80_developers a { color: #e0e0e0; }
+  #faq80_developers .sectiondivider { color: #2A7722; }
+
+  
+  
+  
+  nav .p-faq99_other { border-color: #4d4674; }
+  #faq99_other { background-color: #4d4674 !important; color: #ffffff; }
+  #faq99_other a { color: #ffffff; }
+  #faq99_other .sectiondivider { color: #4d4674; }
+
+
+/* fix CSS of combo.css */
+
+html body div#main nav {
+  background-color: #4d4674;
+}
+
+.container h2 {
+  font-size: 21px;
+  font-weight: 500;
+  text-align: left;
+  line-height: normal;
+  padding-left: 5%;
+}
+
+.section {
+  padding: 20px;
+}
+
+.editparagraph {
+  padding-top: 5px;position:relative; top:47px; left:740px;
+}
+
+.editlink {
+  text-decoration: none;
+  color: #686868;
+}
+
+code {
+  white-space: pre;
+}

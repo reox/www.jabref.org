@@ -1,0 +1,37 @@
+/* ----- per blog colors! ----- */
+
+
+/* fix CSS of combo.css */
+
+html body div#main nav {
+  background-color: #4d4674;
+}
+
+h1 {
+  font-size: 38px;
+}
+
+.container h2 {
+  font-size: 21px;
+  font-weight: 500;
+  text-align: left;
+  line-height: normal;
+  padding-left: 5%;
+}
+
+.section {
+  padding: 20px;
+}
+
+.editparagraph {
+  padding-top: 5px;position:relative; top:47px; left:740px;
+}
+
+.editlink {
+  text-decoration: none;
+  color: #686868;
+}
+
+code {
+  white-space: pre;
+}
